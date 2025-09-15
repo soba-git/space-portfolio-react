@@ -1,7 +1,4 @@
 import { useState, useRef, useLayoutEffect } from "react";
-
-import { cn } from "../lib/utils";
-
 const skillList = [
     // Frontend
     { name: "JavaScript", level: 85, category: "frontend" },

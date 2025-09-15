@@ -1,5 +1,3 @@
-import { SpaceBackground } from "../components/SpaceBackground"
-
 export const NotFound = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden pr-16">
