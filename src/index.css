@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+/* 
+  Theme Custom Properties
+  These CSS variables define color and animation values for use throughout the app.
+*/
+@theme {
+  
+  /* Color palette variables using HSL values */
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-card: hsl(var(--card));
+
+  /* Animation variables for reusable animation timing and effects */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 5s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.8s ease-in forwards;
+  --animate-fade-in-delay-1: fade-in 0.8s ease-in forwards 0.2s;
+  --animate-fade-in-delay-2: fade-in 0.8s ease-in forwards 0.4s;
+  --animate-fade-in-delay-3: fade-in 0.8s ease-in forwards 0.6s;
+  --animate-fade-in-delay-4: fade-in 0.8s ease-in forwards 0.8s;
+  --animate-fade-in-delay-5: fade-in 0.8s ease-in forwards 1s;
+  --animate-fade-in-delay-6: fade-in 0.8s ease-in forwards 1.2s;
+  --animate-fade-out: fade-out 0.8s ease-in forwards;
+  --animate-fade-out-delay-1: fade-out 0.8s ease-in forwards 0.2s;
+  --animate-fade-out-delay-2: fade-out 0.8s ease-in forwards 0.4s;
+  --animate-fade-out-delay-3: fade-out 0.8s ease-in forwards 0.6s;
+  --animate-fade-out-delay-4: fade-out 0.8s ease-in forwards 0.8s;
+  --animate-meteor: meteor 1.5s ease-in-out infinite;
+
+
+  /* 
+    Keyframes for the animations 
+    Here you define the actual animation behavior of the variables above.
+  */
+
+  /* Float animation: moves element up and down */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Pulse-subtle animation: fades element in and out subtly */
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Fade-in animation: fades element in and slides up */
+  @keyframes fade-in {
+    from{
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Fade-out animation: fades element out and slides down */
+  @keyframes fade-out {
+    from{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+
+  /* Meteor animation: moves and fades out element diagonally */
+  @keyframes meteor {
+    0% {
+      transform: translateX(0) translateY(0) rotate(215deg) scaleX(1.2);
+      opacity: 0;
+      filter: blur(1px);
+    }
+    70% {
+      transform: translateX(170px) translateY(170px) rotate(215deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(200px) translateY(200px) rotate(215deg) scaleX(1.4);
+      opacity: 0;
+      filter: blur(2px);
+    }
+  }
+}
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+
+    --primary: 250 47% 60%;
+    --primary-foreground: 210 40% 95%;
+
+    --border: 210 40% 90%;
+
+  }
+
+  .dark { 
+    --background: 225 50% 3%;
+    --foreground: 210 31% 90%;
+
+    --card: 222 47% 10%;
+
+    --primary: 250 70% 60%;
+    --primary-foreground: 210 40% 95%;
+
+    --border: 210 40% 20%;
+  }
+
+  
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+
+  body{
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+  @media (min-width: 1536px) {
+    max-width: 1536px;
+  }
+
+  @media (min-width: 1700px) {
+    max-width: 1700px;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+  }
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 10px rgba(167, 140, 250, 0.5);
+}
+
+@utility card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+@utility gradient-border {
+  @apply relative rounded-md;
+  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+@utility space-button{
+  @apply px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium
+    transition-all duration-30 hover:shadow-[0_0_10px_rgba(139,92,250,0.5)]
+    hover:scale-105 active:scale-95;
+}
+
+@utility space-button-light{
+  @apply px-6 py-3 rounded-full border border-primary text-primary font-medium
+    transition-all duration-30 hover:shadow-[0_0_10px_rgba(139,92,250,0.5)]
+    hover:scale-105 active:scale-95;  
+}
+
+@utility star {
+  @apply absolute bg-white rounded-full;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+@utility meteor {
+  @apply absolute rounded-full;
+  background: linear-gradient(90deg, #fff 0%, #fff0 100%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: rotate(215deg);
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
