@@ -8,7 +8,7 @@ import { AboutMe } from "../components/AboutMe"
 import { Skills } from "../components/Skills"
 import { Projects } from "../components/Projects"
 import { ContactMe } from "../components/ContactMe"
-
+import { Footer } from "../components/Footer"
 
 export const Home = () => {
   const [isDark, setIsDark] = useState(false);
@@ -29,6 +29,7 @@ export const Home = () => {
       <ThemeToggle />
     </div>
     
+
     {isDark ? <SpaceBackground /> : <LightBackground />}
 
     {/* Main Content */}  
@@ -38,9 +39,12 @@ export const Home = () => {
        <Skills/>
        <Projects/>
        <ContactMe/>
+      
     </main>
 
-    {/* Footer */}  
+    <Footer />
     </div>
+
+    
   )
 }

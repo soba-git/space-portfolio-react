@@ -16,7 +16,7 @@ export const HeroSection = () => {
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-6">
-                        <a href="#projects" className="space-button" >
+                        <a href="#projects" className="space-button mx-auto gap-2 w-fit flex items-center" >
                             View My Work
                         </a>    
                     </div>

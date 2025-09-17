@@ -1,6 +1,33 @@
 import { Mail, Map, Linkedin, Github, Phone, Send } from "lucide-react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactMe = () => {
+    const formRef = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID", // EmailJS service ID
+        "YOUR_TEMPLATE_ID", // EmailJS template ID
+        formRef.current,
+        "YOUR_PUBLIC_KEY"   // EmailJS public key
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          formRef.current?.reset();
+        },
+        () => {
+          alert("No public or template ID provided, message not sent.");
+        }
+      );
+  };
+  
+  
   return (
     <section id="contact" className="py-24 bg-secondary/10 relative overflow-hidden">
       <div className="container max-w-4xl mx-auto text-center px-4">
@@ -102,8 +129,8 @@ export const ContactMe = () => {
               <h3 className="text-2xl font-semibold mb-6">Send Me A Message</h3>
               <form
                 className="space-y-4"
-                // TODO: Replace with your Formspree endpoint" 
-                method="POST"
+                ref={formRef}                
+                onSubmit={sendEmail}
               >
                 <div>
                   <label htmlFor="name" className="sr-only">
@@ -153,7 +180,7 @@ export const ContactMe = () => {
                 </button>
               </form>
               <p className="text-xs text-muted-foreground mt-2 text-left">
-                * This form uses <a href="https://formspree.io/" target="_blank" rel="noopener noreferrer" className="underline">Formspree</a> for secure delivery.
+                * This form does not work, because a paid hosting service is required to use <a href="https://www.emailjs.com" target="_blank" rel="noopener noreferrer" className="underline">EmailJS</a>.
               </p>
             </div>
           </div>
