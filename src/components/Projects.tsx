@@ -66,7 +66,7 @@ export const Projects = () => {
                                 <div className="flex justify-between items-center">
                                     <div className="space-x-3 flex">
                                         <a href={project.link} className="text-foreground/80 hover:text-primary transition-colors duration-300"><ExternalLink size={20} /></a>
-                                        <a href={project.github} className="text-foreground/80 hover:text-primary transition-colors duration-300"><Github size={20} /></a>
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors duration-300"><Github size={20} /></a>
                                     </div>
                                 </div>
                             </div>
