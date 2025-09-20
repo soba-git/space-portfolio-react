@@ -1,4 +1,5 @@
 import { useState, useRef, useLayoutEffect } from "react";
+
 const skillList = [
     // Frontend
     { name: "JavaScript", level: 85, category: "frontend" },
