@@ -81,7 +81,7 @@ export const ContactMe = () => {
                   <div className="text-left">
                     <h4 className="font-medium">GitHub</h4>
                     <a
-                      href="https://github.com/soba-git"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
@@ -98,12 +98,12 @@ export const ContactMe = () => {
                   <div className="text-left">
                     <h4 className="font-medium">LinkedIn</h4>
                     <a
-                      href="https://www.linkedin.com/in/wade-simpson-8736b3293/"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      linkedin.com/in/wade-simpson
+                      linkedin.com/in/wade
                     </a>
                   </div>
                 </div>

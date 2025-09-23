@@ -17,7 +17,7 @@ const projects = [
         image: "/projects/linguin.png",
         tags: ["React", "Node.js", "SaaS"],
         link: "#",
-        github: "https://github.com/soba-git/linguin",
+        github: "#",
     },
     {
         id: 3,
