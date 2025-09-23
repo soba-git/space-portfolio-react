@@ -1,33 +1,33 @@
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
-  {
-    id: 1,
-    title: "Echo",
-    description: "Real-time MERN chat app with secure messaging, chat rooms, and history.",
-    image: "/public/img/echo.png",
-    tags: ["MERN", "Socket.IO", "MongoDB"],
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 2,
-    title: "Linguin",
-    description: "SaaS language learning platform with subscription monetization and interactive lessons.",
-    image: "/projects/linguin.png",
-    tags: ["React", "Node.js", "SaaS"],
-    link: "#",
-    github: "https://github.com/soba-git/linguin",
-  },
-  {
-    id: 3,
-    title: "PulseTrack",
-    description: "Health tracker providing real-time monitoring, personalized insights, and alerts.",
-    image: "/projects/pulsetrack.png",
-    tags: ["React", "Firebase", "TailwindCSS"],
-    link: "#",
-    github: "#",
-  },
+    {
+        id: 1,
+        title: "Echo",
+        description: "Real-time MERN chat app with secure messaging, chat rooms, and history.",
+        image: "/public/img/echo.png",
+        tags: ["MERN", "Socket.IO", "MongoDB"],
+        link: "#",
+        github: "#",
+    },
+    {
+        id: 2,
+        title: "Linguin",
+        description: "SaaS language learning platform with subscription monetization and interactive lessons.",
+        image: "/projects/linguin.png",
+        tags: ["React", "Node.js", "SaaS"],
+        link: "#",
+        github: "https://github.com/soba-git/linguin",
+    },
+    {
+        id: 3,
+        title: "Vulkan",
+        description: "Full-featured AI SaaS with subscriptions, user auth, and PostgreSQL database.",
+        image: "/projects/aisaas.png",
+        tags: ["AI", "Node.js", "PostgreSQL"],
+        link: "#",
+        github: "#"
+    },
 ];
 
 
@@ -77,7 +77,7 @@ export const Projects = () => {
                     <a target="_blank" href="https://github.com/soba-git" className="space-button mx-auto gap-2 w-fit flex items-center">Go To Github <ArrowRight size={16} /></a>
 
                 </div>
-                
+
             </div>
         </section>
     );
