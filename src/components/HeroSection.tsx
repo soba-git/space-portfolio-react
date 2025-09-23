@@ -11,8 +11,7 @@ export const HeroSection = () => {
                         <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Simpson</span>
                     </h1> 
                     <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
-                        I build engaging applications with a focus on usability and performance. 
-                        I specialize in Java, Python, and TypeScript/JavaScript to create scalable and user-friendly solutions.
+                        I build secure and engaging applications focused on usability and performance. I specialize in Python, Java, TypeScript/JavaScript, and Go, with experience in web, SAAS, and modern scalable solutions.
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-6">
