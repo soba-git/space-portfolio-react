@@ -5,7 +5,7 @@ const projects = [
         id: 1,
         title: "Echo",
         description: "Real-time MERN chat app with secure messaging, chat rooms, and history.",
-        image: "/public/img/echo.png",
+        image: "/public/projects/echo.png",
         tags: ["MERN", "Socket.IO", "MongoDB"],
         link: "#",
         github: "#",
