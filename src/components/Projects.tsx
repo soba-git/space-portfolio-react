@@ -23,7 +23,7 @@ const projects = [
         id: 3,
         title: "Vulkan",
         description: "Full-featured AI SaaS with subscriptions, user auth, and PostgreSQL database.",
-        image: "/projects/aisaas.png",
+        image: "/projects/vulkan.png",
         tags: ["AI", "Node.js", "PostgreSQL"],
         link: "#",
         github: "#"
