@@ -16,8 +16,8 @@ const projects = [
         description: "SaaS language learning platform with subscription monetization and interactive lessons.",
         image: "/projects/linguin.png",
         tags: ["React", "Node.js", "SaaS"],
-        link: "#",
-        github: "#",
+        link: "https://linguin-five.vercel.app",
+        github: "https://github.com/soba-git/linguin",
     },
     {
         id: 3,
