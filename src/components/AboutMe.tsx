@@ -27,7 +27,7 @@ export const AboutMe = () => {
                             Contact Me
                         </a>
 
-                        <a href="#contact" className="space-button-light">
+                        <a href="/cv/Wade Simpson_CV.pdf" download className="space-button-light">
                             Download CV
                         </a>
                     </div>

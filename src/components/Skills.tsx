@@ -21,8 +21,7 @@ const skillList = [
     { name: "GraphQL", level: 65, category: "backend" },
 
     // DevOps & Tools
-    { name: "Git", level: 85, category: "devops" },
-    { name: "GitHub / GitLab", level: 80, category: "devops" },
+    { name: "Git (GitHub/GitLab)", level: 85, category: "devops" },
     { name: "Docker", level: 70, category: "devops" },
     { name: "Kubernetes", level: 60, category: "devops" },
     { name: "Jenkins", level: 65, category: "devops" },
